@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--
+Template Name: Olester
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html>
+<head>
+<title>Tutorial Fragment</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo">
+      <h1><a href="index.html">Capturing API Descriptions with Vector Representations to Improve Retrieval in Sofware Engineering Applications</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+  <nav id="mainav" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <ul class="clear">
+      <li><a href="index.html"> Home </a></li>
+      <li><a href="codeSearch.html"> API code search </a></li>
+      <li><a href="mapping.html"> Mapping Between API Libraries </a></li>
+      <li class="active"><a href="tutorial.html"> API tutorial fragment search </a></li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </nav>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div style="padding: 0 30px">
+	<p>
+  In this experiment - API tutorial fragment search (code-to-text retrieval), our goal is to retrieve the relevant tutorial fragment given an
+API query. Specifcally, we used D2VEC to compute
+the relevance score sim(A,F) which is cosine similarity between the vector V<sub>A</sub> of the API A after
+training and the vector V<sub>F</sub> for the fragment F
+</p>
+
+<p> 
+<h3> Data Collection </h3>
+For a comparative study, we chose to use the state-of-the-art tool
+FRAFT<sup>2</sup> where the authors also kindly provided the tool and
+dataset with the ground truth used in their experimental studies. </br>
+    McGill Tutorial Oracle: 
+    <a href="https://doubleblindd2vec.github.io/D2Vec/McGill.zip">Download </a> </br>
+	To train the models to build vector representations, we used
+Eclipse JDT compiler to parse the source code including Javadoc of the five libraries (Jodatime, Apache Common Math3, Collection Official, Jenkov Collection, Smack) </br>
+	Documentation of 5 libraries:
+	<a href="https://doubleblindd2vec.github.io/D2Vec/5lib.zip">Download </a> </br>
+</p>
+
+<p>
+<h3> Result </h3>
+D2VEC achieves precision, recall, and F-score of 73.2%, 90.5%, and 80.5%, respectively. Comparing with Ye et al<sup>1</sup>, D2VEC had much better precision (73.2%
+versus 62.5%), while maintaining similar recall. Thus, D2VEC resulted in an improvement of nearly 8% in F-score. It also achieved slightly better results than FRAFT. In
+particular, D2VEC increases recall by 4.5% while loosing only 1%
+precision, leading to an overall increasing F-score of 2% </br>
+<img src="https://doubleblindd2vec.github.io/D2Vec/images/demo/vsFrapt.jpg">
+</p>
+</div>
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+<!-- IE9 Placeholder Support -->
+<script src="layout/scripts/jquery.placeholder.min.js"></script>
+<!-- / IE9 Placeholder Support -->
+<!-- Homepage specific -->
+<script src="layout/scripts/jquery.flexslider-min.js"></script>
+</body>
+</html>

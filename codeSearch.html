@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!--
+Template Name: Olester
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html>
+<head>
+<title>API Code Search</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo">
+      <h1><a href="index.html">Capturing API Descriptions with Vector Representations to Improve Retrieval in Sofware Engineering Applications</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+  <nav id="mainav" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <ul class="clear">
+      <li><a href="index.html"> Home </a></li>
+      <li class="active"><a href="codeSearch.html"> API code search </a></li>
+      <li><a href="mapping.html"> Mapping Between API Libraries </a></li>
+      <li><a href="tutorial.html"> API tutorial fragment search </a></li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </nav>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div style="padding: 0 30px">
+  <p>
+  In this experiment - API example code search (text-to-code retrieval), our goal is to retrieve the API code examples given an
+English query. For D2VEC, we
+treated the query and a code example as two paragraph descriptions
+with different topic IDs and used the trained model to derive their
+vectors. 
+</p>
+
+<p> 
+<h3> Data Collection </h3>
+- Training Data: We only included the documentation of JDK APIs <a href="https://doubleblindd2vec.github.io/D2Vec/JDK.zip">Download </a> </br>
+- Retrieval Data: To evaluate the performance of our retrieval techniques, we collected a parallel dataset of queries and API
+code examples from a Java tutorial website, named KodeJava <a href="https://doubleblindd2vec.github.io/D2Vec/KodeJava.zip">Download </a>
+</p>
+
+<p>
+<h3> Result </h3>
+The retrieval accuracy is 19.9-41.2% with one to five suggestions </br>
+In comparison to Ye et al.<sup>[1]</sup>, the improvement of 8.2% (70%
+relatively) and 11.7% (39.6% relatively) in top-k accuracies are
+achieved by D2VEC in the code search application: </br>
+ <table>
+  <tr>
+    <th></th>
+    <th>top-1</th>
+    <th>top-2</th>
+	<th>top-3</th>
+	<th>top-4</th>
+	<th>top-5</th>
+  </tr>
+  <tr>
+    <td>Ye et al.<sup>[1]</sup></td>
+    <td>11.7</td>
+    <td>18.5</td>
+	<td>22.7</td>
+	<td>26.3</td>
+	<td>29.5</td>
+  </tr>
+  <tr>
+    <td>D2VEC</td>
+    <td><b>19.9</b></td>
+    <td><b>28.8</b></td>
+	<td><b>33.9</b></td>
+	<td><b>38.2</b></td>
+	<td><b>41.2</b></td>
+  </tr>
+  <tr>
+    <td>rVSM</td>
+    <td>19.1</td>
+    <td>23.0</td>
+	<td>25.4</td>
+	<td>27.4</td>
+	<td>35.2</td>
+  </tr> 
+  <tr>
+    <td>rVSM + Ye et al.<sup>[1]</sup></td>
+    <td>28.2</td>
+    <td>30.4</td>
+	<td>33.5</td>
+	<td>34.6</td>
+	<td>38.5</td>
+  </tr>  
+    <tr>
+    <td>rVSM + D2VEC</td>
+    <td><b>35.5</b></td>
+    <td><b>46.7</b></td>
+	<td><b>52.7</b></td>
+	<td><b>58.1</b></td>
+	<td><b>60.9</b></td>
+  </tr>
+</table> 
+</p>
+</div>
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+<!-- IE9 Placeholder Support -->
+<script src="layout/scripts/jquery.placeholder.min.js"></script>
+<!-- / IE9 Placeholder Support -->
+<!-- Homepage specific -->
+<script src="layout/scripts/jquery.flexslider-min.js"></script>
+</body>
+</html>

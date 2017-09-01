@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+Template Name: Olester
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html>
+<head>
+<title>Mapping between API libraries</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row1">
+  <header id="header" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo">
+      <h1><a href="index.html">Capturing API Descriptions with Vector Representations to Improve Retrieval in Sofware Engineering Applications</a></h1>
+    </div>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row2">
+  <nav id="mainav" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <ul class="clear">
+      <li><a href="index.html"> Home </a></li>
+      <li><a href="codeSearch.html"> API code search </a></li>
+      <li class="active"><a href="mapping.html"> Mapping Between API Libraries </a></li>
+      <li><a href="tutorial.html"> API tutorial fragment search </a></li>
+    </ul>
+    <!-- ################################################################################################ -->
+  </nav>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div style="padding: 0 30px">
+<p>
+  In this experiment - API mapping between libraries (code-to-code retrieval), our goal is to derive single mappings for equivalent APIs between
+two libraries, JDK and Apache. 
+</p>
+<p> 
+<h3> Data Collection </h3>
+To train D2VEC, we used the training data with both API documentations of Java JDK Core and Apache Commons libraries. </br>
+API documentations of Java JDK Core: 
+    <a href="https://doubleblindd2vec.github.io/D2Vec/JDK.zip">Download </a> </br>
+API documentations of Apache Common Libraries: 
+    <a href="https://doubleblindd2vec.github.io/D2Vec/Apache.zip">Download </a>
+</p>
+
+<p>
+<h3> Result </h3>
+D2VEC can derive correct answers for 36 out of 100 cases with only
+one suggestion. In half of the cases, the correct mappings are in the
+list of 3–5 suggestions. As compared to Word2Vec, D2VEC outperforms with 14% at
+top- 1 and top-10 accuracies </br>
+Blue is Word2Vec, Orange is D2VEC </br>
+<img src="https://doubleblindd2vec.github.io/D2Vec/images/demo/topk.jpg">
+</p>
+</div>
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+<!-- IE9 Placeholder Support -->
+<script src="layout/scripts/jquery.placeholder.min.js"></script>
+<!-- / IE9 Placeholder Support -->
+<!-- Homepage specific -->
+<script src="layout/scripts/jquery.flexslider-min.js"></script>
+</body>
+</html>
